@@ -25,9 +25,9 @@ from datetime import datetime, timedelta
 
 import requests
 
-from .credentialutil import Credentialutil
-from .model import util
-from .model.model import OauthToken
+from ebay_feedsdk.oauthclient.credentialutil import Credentialutil
+from ebay_feedsdk.oauthclient.model import util
+from ebay_feedsdk.oauthclient.model.model import OauthToken
 
 LOGFILE = 'eBay_Oauth_log.txt'
 logging.basicConfig(level=logging.DEBUG, filename=LOGFILE,

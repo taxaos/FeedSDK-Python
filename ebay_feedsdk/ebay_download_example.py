@@ -1,12 +1,11 @@
 import logging
 
-from errors.custom_exceptions import DownloadError
-from feed import Feed
-from filter.feed_filter import GetFeedResponse
-from oauthclient.credentialutil import Credentialutil
-from oauthclient.model.model import Environment, OauthToken, EnvType
-from oauthclient.oauth2api import Oauth2api
-
+from ebay_feedsdk.errors.custom_exceptions import DownloadError
+from ebay_feedsdk.feed import Feed
+from ebay_feedsdk.filter.feed_filter import GetFeedResponse
+from ebay_feedsdk.oauthclient.credentialutil import Credentialutil
+from ebay_feedsdk.oauthclient.model.model import Environment, OauthToken, EnvType
+from ebay_feedsdk.oauthclient.oauth2api import Oauth2api
 
 class EbayDownloadExample:
     app_scopes = ["https://api.ebay.com/oauth/api_scope", "https://api.ebay.com/oauth/api_scope/buy.item.feed"]

@@ -16,8 +16,8 @@
 # **************************************************************************/
 
 from datetime import datetime, timedelta
-from enums.feed_enums import FeedType
-from errors.custom_exceptions import InputDataError
+from ebay_feedsdk.enums.feed_enums import FeedType
+from ebay_feedsdk.errors.custom_exceptions import InputDataError
 
 
 def get_formatted_date(feed_type, day_delta=None):

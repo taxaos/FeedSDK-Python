@@ -15,7 +15,7 @@
 # limitations under the License.
 # **************************************************************************/
 
-from config.config_request import ConfigFileRequest
+from ebay_feedsdk.config.config_request import ConfigFileRequest
 
 
 def filter_feed(config_path):

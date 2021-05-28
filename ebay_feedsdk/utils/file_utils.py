@@ -18,8 +18,8 @@
 import json
 from os import makedirs
 from os.path import isdir, basename, splitext, exists, dirname
-from errors import custom_exceptions
-import constants.feed_constants as const
+from ebay_feedsdk.errors import custom_exceptions
+from ebay_feedsdk.constants import feed_constants as const
 
 
 def append_response_to_file(file_handler, data):
