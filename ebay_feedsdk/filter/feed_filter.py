@@ -130,17 +130,17 @@ class FeedFilterRequest(object):
         if not self.input_file_path or not isfile(self.input_file_path):
             return Response(const.FAILURE_CODE,
                             'Input file is a directory or does not exist. Cannot filter. Aborting...',
-                            self.filtered_file_path, self.queries)
+                            self.filtered_file_path, self.queries, None)
         if not query_str:
             return Response(const.FAILURE_CODE, 'No filters have been specified. Cannot filter. Aborting...',
-                            self.filtered_file_path, self.queries)
+                            self.filtered_file_path, self.queries, None)
         # create the data frame
         filtered_data = self.__read_chunks_gzip_file(query_str, column_name_list, keep_db)
         if not filtered_data.empty:
             self.__save_filtered_data_frame(filtered_data)
         else:
             logger.error('No filtered feed file created')
-        return Response(const.SUCCESS_CODE, const.SUCCESS_STR, self.filtered_file_path, self.queries)
+        return Response(const.SUCCESS_CODE, const.SUCCESS_STR, self.filtered_file_path, self.queries, None)
 
     def __derive_filtered_file_path(self):
         file_path, full_file_name = split(abspath(self.input_file_path))
