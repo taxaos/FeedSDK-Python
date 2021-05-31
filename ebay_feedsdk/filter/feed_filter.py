@@ -22,13 +22,13 @@ from os import remove
 from sqlalchemy import create_engine
 from collections import namedtuple
 from os.path import split, abspath, join, isfile
-from utils import filter_utils
-from utils.file_utils import get_extension
+from ebay_feedsdk.utils import filter_utils
+from ebay_feedsdk.utils.file_utils import get_extension
 
-from enums.feed_enums import FeedColumn
-from enums.file_enums import FileEncoding, FileFormat
-import constants.feed_constants as const
-from utils.logging_utils import setup_logging
+from ebay_feedsdk.enums.feed_enums import FeedColumn
+from ebay_feedsdk.enums.file_enums import FileEncoding, FileFormat
+from ebay_feedsdk.constants import feed_constants as const
+from ebay_feedsdk.utils.logging_utils import setup_logging
 
 setup_logging()
 logger = logging.getLogger(__name__)

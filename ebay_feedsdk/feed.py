@@ -20,13 +20,13 @@ import urllib3
 import json
 import logging
 from os import path
-from utils import file_utils, date_utils
-import constants.feed_constants as const
-from filter.feed_filter import GetFeedResponse
-from enums.file_enums import FileFormat
-from enums.feed_enums import FeedType, FeedScope, FeedPrefix, Environment
-from errors.custom_exceptions import InputDataError, FileCreationError
-from utils.logging_utils import setup_logging
+from .utils import file_utils, date_utils
+from .constants import feed_constants as const
+from .filter.feed_filter import GetFeedResponse
+from .enums.file_enums import FileFormat
+from .enums.feed_enums import FeedType, FeedScope, FeedPrefix, Environment
+from .errors.custom_exceptions import InputDataError, FileCreationError
+from .utils.logging_utils import setup_logging
 
 setup_logging()
 logger = logging.getLogger(__name__)
