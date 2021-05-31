@@ -17,13 +17,13 @@
 
 import logging
 from os import path
-from utils.file_utils import read_json
-from feed import Feed
-from filter.feed_filter import FeedFilterRequest
-from constants.feed_constants import SUCCESS_CODE
-from enums.config_enums import ConfigField, FeedField, FilterField
-from errors.custom_exceptions import ConfigError
-from utils.logging_utils import setup_logging
+from ebay_feedsdk.utils.file_utils import read_json
+from ebay_feedsdk.feed import Feed
+from ebay_feedsdk.filter.feed_filter import FeedFilterRequest
+from ebay_feedsdk.constants.feed_constants import SUCCESS_CODE
+from ebay_feedsdk.enums.config_enums import ConfigField, FeedField, FilterField
+from ebay_feedsdk.errors.custom_exceptions import ConfigError
+from ebay_feedsdk.utils.logging_utils import setup_logging
 
 setup_logging()
 logger = logging.getLogger(__name__)
