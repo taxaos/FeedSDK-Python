@@ -185,6 +185,8 @@ class Feed(object):
             feed_prefix = str(FeedPrefix.BOOTSTRAP)
         elif str(FeedScope.DAILY) == self.feed_scope:
             feed_prefix = str(FeedPrefix.DAILY)
+        elif str(FeedScope.HOURLY) == self.feed_scope:
+            feed_prefix = str(FeedPrefix.HOURLY)
         else:
             raise InputDataError('Unknown feed scope', self.feed_scope)
         file_name = str(FeedType.ITEM) + '_' + feed_prefix + '_' + str(self.category_id) + '_' + self.feed_date + \

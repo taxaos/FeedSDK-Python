@@ -46,6 +46,7 @@ class Environment(Enum):
 class FeedPrefix(Enum):
     DAILY = 'daily'
     BOOTSTRAP = 'bootstrap'
+    HOURLY = 'hourly'
 
     def __str__(self):
         return str(self.value)
@@ -55,6 +56,7 @@ class FeedPrefix(Enum):
 class FeedScope(Enum):
     DAILY = 'NEWLY_LISTED'
     BOOTSTRAP = 'ALL_ACTIVE'
+    HOURLY = 'HOURLY'
 
     def __str__(self):
         return str(self.value)
