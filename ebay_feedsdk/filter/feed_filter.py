@@ -17,6 +17,8 @@
 
 import time
 import logging
+
+import csv
 import pandas as pd
 from os import remove
 from sqlalchemy import create_engine
@@ -160,7 +162,7 @@ class FeedFilterRequest(object):
                                     compression=self.compression_type, encoding=self.encoding, usecols=cols,
                                     sep=self.separator, quotechar='"', lineterminator='\n', skip_blank_lines=True,
                                     skipinitialspace=True, error_bad_lines=False, index_col=False,
-                                    chunksize=self.rows_chunk_size, dtype=data_types,
+                                    chunksize=self.rows_chunk_size, dtype=data_types, quoting=csv.QUOTE_NONE,
                                     converters={'AvailabilityThreshold': filter_utils.convert_to_float_max_int,
                                                 'EstimatedAvailableQuantity': filter_utils.convert_to_float_max_int,
                                                 'PriceValue': filter_utils.convert_to_float_zero,
